@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.31)
+
+project(LDL_WinAPI LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+add_library(LDL_WinAPI)
+target_sources(LDL_WinAPI PUBLIC FILE_SET CXX_MODULES FILES "LDL.WinAPI.ixx")
