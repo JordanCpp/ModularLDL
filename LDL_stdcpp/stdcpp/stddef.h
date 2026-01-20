@@ -5,9 +5,8 @@
 
 #pragma once
 
-namespace std
-{
-    using size_t    = decltype(sizeof(0));
-    using ptrdiff_t = decltype((char*)0 - (char*)0);
-    using nullptr_t = decltype(nullptr);
-}
+#include <cstddef>
+
+using size_t    = std::size_t;
+using ptrdiff_t = std::ptrdiff_t;
+using nullptr_t = std::nullptr_t;

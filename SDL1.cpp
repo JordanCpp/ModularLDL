@@ -34,6 +34,8 @@ int main()
                 running = false;
             }
         }
+
+        SDL_Flip(screen);
     }
 
     SDL_Quit();

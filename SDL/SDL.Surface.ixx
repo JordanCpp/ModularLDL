@@ -64,4 +64,5 @@ export
 
 	inline SDL_Surface* (__cdecl* SDL_SetVideoMode)(int width, int height, int bpp, Uint32 flags) = nullptr;
 	inline void(__cdecl* SDL_WM_SetCaption)(const char* title, const char* icon) = nullptr;
+	inline int(__cdecl* SDL_Flip)(SDL_Surface* screen) = nullptr;
 }

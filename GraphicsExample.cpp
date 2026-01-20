@@ -3,8 +3,9 @@
 // (See accompanying file LICENSE_1_0.txt or copy at
 // https://www.boost.org/LICENSE_1_0.txt) 
 
-import Graphics;
+import Framework;
 
+using namespace Events;
 using namespace Graphics;
 
 int main()
@@ -26,6 +27,8 @@ int main()
         {
             canvas->StopEvent();
         }
+
+        canvas->Update();
     }
 
     return 0;

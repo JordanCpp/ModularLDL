@@ -3,7 +3,15 @@
 // (See accompanying file LICENSE_1_0.txt or copy at
 // https://www.boost.org/LICENSE_1_0.txt) 
 
-export module LDL.WinAPI;
+#include <string>
+#include <iostream>
 
-export import LDL.WinAPI.Kernel32;
-export import LDL.WinAPI.Types;
+int main()
+{
+	std::string s1 = "Hello ";
+	s1 += "World!";
+
+	std::cout << s1 << std::endl;
+
+	return 0;
+}

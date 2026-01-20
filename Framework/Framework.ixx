@@ -3,7 +3,9 @@
 // (See accompanying file LICENSE_1_0.txt or copy at
 // https://www.boost.org/LICENSE_1_0.txt) 
 
-export module LDL.WinAPI;
+module;
 
-export import LDL.WinAPI.Kernel32;
-export import LDL.WinAPI.Types;
+export module Framework;
+
+export import Graphics;
+export import Events;

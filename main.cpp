@@ -3,34 +3,25 @@
 // (See accompanying file LICENSE_1_0.txt or copy at
 // https://www.boost.org/LICENSE_1_0.txt) 
 
-import LDL.Window;
-
-using namespace LDL;
+#include <vector>
+#include <string>
+#include <iostream>
 
 int main()
 {
-	Result result;
-	Context context;
+    std::vector<std::string> vec;
 
-	auto windowResult = CreateWindow(result, context, Vec2u(0, 0), Vec2u(800, 600), "LDL Window!", WindowMode::Fixed);
+    vec.push_back("1");
+    vec.push_back("2");
 
-	if (!windowResult)
-	{
-		return -1;
-	}
+    for (auto i : vec)
+    {
+        std::cout << i << std::endl;
+    }
 
-	Event event;
+    std::string message = "Crazy programming!";
 
-	while (windowResult->get()->Running())
-	{
-		while (windowResult->get()->GetEvent(event))
-		{
-			if ((event.Type == IsQuit) || (event.IsKeyPressed(KeyboardKey::Escape)))
-			{
-				windowResult->get()->StopEvent();
-			}
-		}
-	}
+    std::cout << message << std::endl;
 
-	return 0;
+    return 0;
 }

@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <stddef.h>
+#include <cstddef>
 
 [[nodiscard]]
 void* operator new(size_t bytes);

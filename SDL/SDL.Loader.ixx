@@ -30,6 +30,7 @@ export
 				Bind(SDL_PollEvent, "SDL_PollEvent");
 				Bind(SDL_GetError, "SDL_GetError");
 				Bind(SDL_WM_SetCaption, "SDL_WM_SetCaption");
+				Bind(SDL_Flip, "SDL_Flip");
 			}
 		}
 

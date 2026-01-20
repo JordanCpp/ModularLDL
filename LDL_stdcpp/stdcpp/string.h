@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <stddef.h>
+#include <cstddef>
 
 [[nodiscard]]
 int strcmp(const char* s1, const char* s2);

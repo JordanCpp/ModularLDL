@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <stddef.h>
+#include <cstddef>
 #include <memory>
 
 namespace std

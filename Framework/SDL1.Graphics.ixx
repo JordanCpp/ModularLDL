@@ -5,7 +5,6 @@
 
 module;
 
-#include <cstdint>
 #include <expected>
 #include <memory>
 #include <string>
@@ -13,33 +12,10 @@ module;
 export module Graphics;
 
 import SDL;
+import Events;
 
 export namespace Graphics
 {
-    namespace Events
-    {
-        class Quit
-        {
-        public:
-            std::uint8_t Type;
-        };
-
-        class Event
-        {
-        public:
-            enum
-            {
-                IsQuit = 1
-            };
-
-            union
-            {
-                std::uint8_t Type;
-                Events::Quit Quit;
-            };
-        };
-    }
-
     class Canvas
     {
     public:
@@ -75,6 +51,11 @@ export namespace Graphics
         void StopEvent()
         {
             _running = false;
+        }
+
+        void Update()
+        {
+            SDL_Flip(_screen);
         }
     private:
         bool         _running;

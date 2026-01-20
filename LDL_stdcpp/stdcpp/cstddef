@@ -5,7 +5,9 @@
 
 #pragma once
 
-#include <cstddef>
-
-void* malloc(size_t size) noexcept;
-void free(void* ptr) noexcept;
+namespace std
+{
+    using size_t    = decltype(sizeof(0));
+    using ptrdiff_t = decltype((char*)0 - (char*)0);
+    using nullptr_t = decltype(nullptr);
+}
